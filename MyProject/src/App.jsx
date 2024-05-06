@@ -41,12 +41,28 @@ import JsxExample01 from "./Function_components/JsxExample01";
 import JsxExample2 from "./JSX_Examples/JsxExample2";
 import ALLExample from "./JSX_Examples/ALLExample";
 import AllFunctionComponents from "./Function_components/AllFunctionComponents";
+import AllStyleComponents from "./Style_components/AllStyleComponents";
+import Alltask from "./Alltasks/Alltask";
+import AllStateExample from "./StateinReact/AllStateExample";
+import AllClassComponent from "./ClassComponents/AllClassComponent";
+import AllProps from "./PropsAll/AllProps";
 
 export default function App() {
   return (
     <div>
       {/* <ALLExample /> */}
-      <AllFunctionComponents />
+      {/* <AllFunctionComponents /> */}
+      {/* Style All Components */}
+      {/* All style components  */}
+      {/* <AllStyleComponents /> */}
+      {/* All task examples */}
+      <Alltask />
+      {/* All state examples */}
+      {/* <AllStateExample /> */}
+      {/* <AllClassComponent /> */}
+
+      {/* <AllProps /> */}
+      {/* <AllProps /> */}
     </div>
   );
 }
