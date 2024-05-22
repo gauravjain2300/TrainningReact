@@ -11,6 +11,10 @@ import TenthTask from "./TenthTask";
 import Eleventh from "./Eleventh";
 import TwelthTask from "./TwelthTask";
 import ParentTask01 from "./ParentTask01";
+import UservalueArrayTask from "./UservalueArrayTask";
+import Imageadd1 from "./Imageadd1";
+import HookExample1 from "../9_Hooks/HookExample1";
+import HookTask01 from "./HookTask01";
 
 export default function Alltask() {
   return (
@@ -28,8 +32,10 @@ export default function Alltask() {
       {/* <TenthTask /> */}
       {/* <Eleventh /> */}
       {/* <TwelthTask /> */}
-
-      <ParentTask01 />
+      {/* <Imageadd1 /> */}
+      {/* <ParentTask01 /> */}
+      {/* <UservalueArrayTask /> */}
+      {/* <HookTask01 /> */}
     </div>
   );
 }

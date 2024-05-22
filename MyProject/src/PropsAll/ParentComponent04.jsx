@@ -7,9 +7,10 @@ export default function ParentComponent04() {
   const [msg, setMessage] = useState("My react Msg");
 
   const handleclick = () => {
-    console.log("Clickeed");
-    console.log(islogin);
+    // console.log("Clickeed");
+    // console.log(islogin);
     setlogin(!islogin);
+    // setlogin(true);
   };
 
   return (

@@ -46,6 +46,12 @@ import Alltask from "./Alltasks/Alltask";
 import AllStateExample from "./StateinReact/AllStateExample";
 import AllClassComponent from "./ClassComponents/AllClassComponent";
 import AllProps from "./PropsAll/AllProps";
+import Alllocalstorage from "./LocalStorageExample/Alllocalstorage";
+import AllPractice from "./PracticeFolder/AllPractice";
+import MapcrudExample from "./8_mapcrud/MapcrudExample";
+import SecondCrudPractice from "./8_mapcrud/SecondCrudPractice";
+import AllhookExample from "./9_Hooks/AllhookExample";
+import AllProject from "./ClassComponents/10_Project/AllProject";
 
 export default function App() {
   return (
@@ -56,13 +62,19 @@ export default function App() {
       {/* All style components  */}
       {/* <AllStyleComponents /> */}
       {/* All task examples */}
-      <Alltask />
+      {/* <Alltask /> */}
       {/* All state examples */}
       {/* <AllStateExample /> */}
       {/* <AllClassComponent /> */}
 
       {/* <AllProps /> */}
       {/* <AllProps /> */}
+      {/* <Alllocalstorage /> */}
+      {/* <AllPractice /> */}
+      {/* <MapcrudExample /> */}
+      {/* <SecondCrudPractice /> */}
+      <AllProject />
+      {/* <AllhookExample /> */}
     </div>
   );
 }

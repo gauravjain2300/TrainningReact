@@ -13,6 +13,7 @@ export default function () {
   const [subject, setsubject] = useState("");
   const [male, setMale] = useState("");
   const [female, setFemale] = useState("");
+  const [image, setImage] = useState("");
 
   //  const gender =
   //   if (male) {
@@ -39,6 +40,10 @@ export default function () {
     console.log(gender);
   };
 
+  const handleFileChange = (e) => {
+    setImage(URL.createObjectURL(e.target.files[0]));
+  };
+
   return (
     <div className="Waves">
       <div className="Main-wrapper">
@@ -55,7 +60,6 @@ export default function () {
         {/* <fieldset> */}
         <div className="Allinput">
           <div>
-            {" "}
             <label>Enter your Full name:</label>
             <input
               type="text"
@@ -121,7 +125,14 @@ export default function () {
             className="btn"
             onClick={submit}
           /> */}
+            <input
+              type="File"
+              accept="image/jpeg,image/png, image/jpg"
+              id="input-file"
+              onChange={handleFileChange}
+            />
           </div>
+
           <br />
         </div>
 
@@ -138,11 +149,7 @@ export default function () {
             City={City}
             subject={subject}
             gender={
-              male ? (
-                <img src="Cartoonboy.jpg" alt="" />
-              ) : (
-                <img src="Woman.jpg" alt="" />
-              )
+              male ? <img src={image} alt="" /> : <img src={image} alt="" />
             }
           />
         )}
