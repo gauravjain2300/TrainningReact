@@ -69,11 +69,11 @@ export default function App() {
 
       {/* <AllProps /> */}
       {/* <AllProps /> */}
-      {/* <Alllocalstorage /> */}
+      <Alllocalstorage />
       {/* <AllPractice /> */}
       {/* <MapcrudExample /> */}
       {/* <SecondCrudPractice /> */}
-      <AllProject />
+      {/* <AllProject /> */}
       {/* <AllhookExample /> */}
     </div>
   );

@@ -15,6 +15,7 @@ import UservalueArrayTask from "./UservalueArrayTask";
 import Imageadd1 from "./Imageadd1";
 import HookExample1 from "../9_Hooks/HookExample1";
 import HookTask01 from "./HookTask01";
+import TextConverter from "./TextConverter";
 
 export default function Alltask() {
   return (
@@ -35,6 +36,7 @@ export default function Alltask() {
       {/* <Imageadd1 /> */}
       {/* <ParentTask01 /> */}
       {/* <UservalueArrayTask /> */}
+      <TextConverter />
       {/* <HookTask01 /> */}
     </div>
   );

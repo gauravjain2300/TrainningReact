@@ -1,0 +1,308 @@
+@media (max-width: 1400px) {
+  .Yourname {
+    width: 400px;
+  }
+  .Gender {
+    width: 400px;
+  }
+  .Messages {
+    width: 400px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Yourname {
+    width: 400px;
+  }
+  .Gender {
+    width: 400px;
+  }
+  .Messages {
+    width: 400px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  ol {
+    gap: 80px;
+  }
+  .text {
+    text-align: start;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  h2 + p {
+    font-size: 15px;
+  }
+  .coffecup {
+    width: 400px;
+  }
+  .bottle {
+    flex-wrap: wrap;
+  }
+
+  .gaurav {
+    flex-wrap: wrap;
+    gap: 200px;
+  }
+  .Yourname {
+    width: 400px;
+  }
+  .Gender {
+    width: 400px;
+  }
+  .Messages {
+    width: 400px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  ol {
+    gap: 50px;
+  }
+  .container-1 {
+    flex-wrap: wrap;
+  }
+
+  .container-2 {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .coffecup {
+    width: 767px;
+  }
+  .bottle {
+    flex-wrap: wrap;
+  }
+  .tarun {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .container-5 {
+    justify-content: center;
+    align-items: center;
+  }
+  .container-6 {
+    flex-wrap: wrap;
+  }
+  .Yourname {
+    width: 400px;
+  }
+  .Gender {
+    width: 400px;
+  }
+  .Messages {
+    width: 400px;
+    height: 30px;
+  }
+  .container-6 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .gaurav {
+    flex-wrap: wrap;
+    gap: 149px;
+  }
+}
+
+@media (max-width: 576px) {
+  nav {
+    position: relative;
+    gap: 30px;
+  }
+
+  .ol {
+  }
+  #check {
+  }
+
+  .bar {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+  }
+
+  #check:checked ~ ol {
+    display: block;
+    right: 0px;
+  }
+
+  ol {
+    display: none;
+    position: absolute;
+    /* top: 50px; */
+    top: 0px;
+    gap: 70px;
+    display: flex;
+    flex-direction: row;
+    display: none;
+    justify-content: end;
+    height: 200px;
+    background-color: #b13941;
+
+    /* font-size: 23px; */
+    text-transform: uppercase;
+    /* color: #b13941; */
+    color: white;
+    justify-content: space-between;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  h1 + p {
+    font-size: 10px;
+  }
+
+  .container-1 {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  h2 + p {
+    font-size: 13px;
+  }
+
+  .container-2 {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .coffecup {
+    width: 575px;
+  }
+  .bottle {
+    flex-wrap: wrap;
+  }
+  h4 + p {
+    font-size: 12px;
+  }
+  .tarun {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .Book {
+    justify-content: center;
+  }
+
+  .container-6 {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .Yourname {
+    width: 400px;
+  }
+  .Gender {
+    width: 400px;
+  }
+  .Messages {
+    width: 400px;
+    height: 30px;
+  }
+  h6 {
+    font-size: 30px;
+  }
+
+  .container-6 {
+    margin: 0 auto;
+  }
+
+  .gaurav {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .charger {
+    flex-wrap: wrap;
+  }
+
+  .container7 {
+    gap: 0px;
+  }
+  .none {
+    display: none;
+  }
+}
+
+@media (max-width: 376px) {
+  #check {
+    display: block;
+    top: 20px;
+    opacity: 0;
+    border: none;
+    position: absolute;
+    right: 10px;
+  }
+  nav label {
+    display: block;
+  }
+  ol {
+    gap: 50px;
+    width: 100%;
+    padding-top: 20px;
+  }
+  .main-text {
+    padding: 40px;
+    margin: 10px;
+    font-weight: bold;
+  }
+  h1 {
+    font-weight: bold;
+  }
+  .container-1 {
+    flex-wrap: wrap;
+  }
+
+  .container-2 {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .coffecup {
+    width: 100px;
+  }
+  .bottle {
+    flex-wrap: wrap;
+  }
+  .tarun {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .container-5 {
+    justify-content: center;
+    align-items: center;
+  }
+  .container-6 {
+    flex-wrap: wrap;
+  }
+  .Yourname {
+    width: 300px;
+  }
+  .Gender {
+    width: 300px;
+  }
+  .Messages {
+    width: 300px;
+    height: 30px;
+  }
+  .container-6 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .gaurav {
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+  .mobile {
+    width: 300px;
+  }
+  ul {
+    display: none;
+  }
+  .company {
+    display: none;
+  }
+}

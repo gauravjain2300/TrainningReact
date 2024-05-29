@@ -1,0 +1,18 @@
+useRef: useRef is a one of most popular hook in reacct js
+         useRef which is refer specific Component
+
+         eg.on button click we can focus on input box      
+
+------------- ---------------------------------------------------------------------------------------------------
+
+UseContext : manage globally state
+             - it contains 3 properties :
+
+             
+              createContext():using of createContextwe can create context globally
+
+
+              UseContext(contextName): We can use specific context any Component
+
+
+              context.Provider: which allow specific Component to specific context
