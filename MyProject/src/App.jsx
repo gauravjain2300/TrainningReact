@@ -65,11 +65,9 @@ export default function App() {
       {/* <Alltask /> */}
       {/* All state examples */}
       {/* <AllStateExample /> */}
-      {/* <AllClassComponent /> */}
-
+      <AllClassComponent />/{/* <AllProps /> */}
       {/* <AllProps /> */}
-      {/* <AllProps /> */}
-      <Alllocalstorage />
+      {/* <Alllocalstorage /> */}
       {/* <AllPractice /> */}
       {/* <MapcrudExample /> */}
       {/* <SecondCrudPractice /> */}

@@ -7,6 +7,11 @@ body {
   background-color: #000;
 }
 
+.All-bills {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 .background-image {
   background-image: url(../../../public/close-up-delicious-burger-meal.jpg);
   height: 100vh;
@@ -52,8 +57,9 @@ body {
   background-color: #666;
   height: 50px;
   color: white;
-  border-radius: 10px;
+  /* justify-content: center; */
   margin: 0 auto;
+  border-radius: 10px;
 }
 
 .items button:hover {
@@ -185,7 +191,7 @@ h1 {
   /* background-image: url(../../../public/pizza-2068272_1920.jpg); */
   background-image: url(../../../public/top-view-delicious-food-with-copy-space.jpg);
 
-  height: 600px;
+  height: 700px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -222,16 +228,17 @@ option {
 .items {
   padding-left: 60px;
   /* border: 1px solid white; */
-  width: 40%;
+  /* width: 40%; */
   padding-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  position: relative;
+  gap: 39px;
 }
 
 .items input:nth-child(1) {
   /* margin-top: 20px; */
-  width: 60%;
+  width: 30%;
   background-color: transparent;
   border: none;
 
@@ -244,14 +251,27 @@ option {
 .items input:nth-child(1):focus {
   outline: none;
 }
+.Brownie {
+  width: 400px;
 
+  border-radius: 20px;
+
+  height: 200px;
+}
+.Chocolate {
+  position: absolute;
+  left: 38%;
+  top: 50px;
+  text-align: center;
+}
 .items input:nth-child(2) {
-  width: 60%;
+  width: 30%;
   height: 40px;
-  background-color: tomato;
-  background-color: #d43717;
-  color: white;
 
+  background-color: #d43717;
+  background-color: #cd6235;
+  color: white;
+  padding-left: 20px;
   border-radius: 10px;
 }
 .items input:nth-child(2):focus {
@@ -284,7 +304,7 @@ label {
 }
 
 h2 {
-  color: white;
+  /* color: white; */
   font-size: 30px;
   text-align: center;
 }
@@ -338,7 +358,7 @@ p {
   top: -371px;
   /* margin: 0 auto; */
   width: 500px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   background: #fff;
 }
 
@@ -352,7 +372,7 @@ p {
   min-height: 91px;
 }
 #invoice-mid {
-  min-height: 120px;
+  min-height: 70px;
 }
 #invoice-bot {
   min-height: 250px;
@@ -384,6 +404,11 @@ p {
 .title p {
   text-align: right;
 }
+h6 {
+  font-size: 30px;
+  /* color: #801109; */
+  color: #777;
+}
 #project {
   margin-left: 52%;
 }
@@ -397,16 +422,18 @@ td {
 }
 .tabletitle {
   padding: 5px;
-  background: #eee;
+  /* background: #eee; */
+  color: black;
 }
 .service {
   border: 1px solid #eee;
 }
-.item {
-  width: 50%;
-}
+
 .itemtext {
   font-size: 0.9em;
+}
+.tableitem {
+  text-align: center;
 }
 
 #legalcopy {

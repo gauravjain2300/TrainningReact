@@ -7,20 +7,26 @@ import HookExample4 from "./HookExample4";
 import UseExample01 from "./UseRefAllExample/UseExample01";
 import UseRefExample02 from "./UseRefAllExample/UseRefExample02";
 import UseExample03 from "./UseRefAllExample/UseExample03";
-import Example1 from "./UseContext/Example1";
 
 export default function AllhookExample() {
   return (
     <div>
       {/* <HookExample1 /> */}
       {/* <HookExample2dependcies /> */}
-      {/* <HookTask /> */}
+      {/* <Ho
+      okTask /> */}
       {/* <HookExample3 /> */}
       {/* <HookExample4 /> */}
       {/* <UseExample01 />
       <UseRefExample02 />
       <UseExample03 /> */}
-      <Example1 />
+      {/* <Example1 /> */}
+      {/* <UseExample /> */}
+      {/* <ComponentExample1 /> */}
+
+      {/* <ThemeContext>
+        <ChildContext />
+      </ThemeContext> */}
     </div>
   );
 }
