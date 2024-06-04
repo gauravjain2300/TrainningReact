@@ -24,12 +24,12 @@ body {
 .card {
   position: absolute;
   margin: auto;
-  
+
   top: -150px;
 
   right: 0;
   bottom: 0;
-  
+
   left: 1000px;
   width: 250px;
   height: 400px;
@@ -60,7 +60,7 @@ body {
     box-shadow: 0 0 0 5px #151515, inset 0 0 0 5px #000000,
       inset 0 0 0 5px hsl(0, 0%, 0%), inset 0 0 0 5px #000000,
       inset 0 0 0 5px #000000;
-    
+
     background-color: #000000;
     background-color: orange;
 
@@ -166,7 +166,7 @@ body {
       font-weight: 400;
       font-size: 45px;
       letter-spacing: 0.05em;
-      
+
       text-align: center;
       color: white;
     }
@@ -195,7 +195,6 @@ body {
     }
   }
 }
-
 
 @keyframes fadeInMove {
   0% {

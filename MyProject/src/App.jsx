@@ -52,6 +52,8 @@ import MapcrudExample from "./8_mapcrud/MapcrudExample";
 import SecondCrudPractice from "./8_mapcrud/SecondCrudPractice";
 import AllhookExample from "./9_Hooks/AllhookExample";
 import AllProject from "./ClassComponents/10_Project/AllProject";
+import AllForewardRefExamples from "./ForwardRefExamples/AllForewardRefExamples";
+import Project01 from "./ClassComponents/10_Project/Project01";
 
 export default function App() {
   return (
@@ -65,7 +67,7 @@ export default function App() {
       {/* <Alltask /> */}
       {/* All state examples */}
       {/* <AllStateExample /> */}
-      <AllClassComponent />/{/* <AllProps /> */}
+      {/* <AllClassComponent /> */}/{/* <AllProps /> */}
       {/* <AllProps /> */}
       {/* <Alllocalstorage /> */}
       {/* <AllPractice /> */}
@@ -73,6 +75,8 @@ export default function App() {
       {/* <SecondCrudPractice /> */}
       {/* <AllProject /> */}
       {/* <AllhookExample /> */}
+      <Project01 />
+      {/* <AllForewardRefExamples /> */}
     </div>
   );
 }

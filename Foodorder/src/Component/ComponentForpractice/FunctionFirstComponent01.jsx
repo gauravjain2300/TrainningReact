@@ -135,7 +135,8 @@ export default function FunctionFirstComponent01() {
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >
-            Submit
+            {/* Submit */}
+            Check order
           </button>
 
           {/* Here is the second Component For the Dilouge Box */}

@@ -34,9 +34,9 @@ export default function Alltask() {
       {/* <Eleventh /> */}
       {/* <TwelthTask /> */}
       {/* <Imageadd1 /> */}
-      {/* <ParentTask01 /> */}
+      <ParentTask01 />
       {/* <UservalueArrayTask /> */}
-      <TextConverter />
+      {/* <TextConverter /> */}
       {/* <HookTask01 /> */}
     </div>
   );

@@ -1,4 +1,4 @@
-* {
+/* * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -68,7 +68,7 @@ body {
 /* .All-buttons :nth-child(6):hover {
   transform: scale(-1.1);
 } */
-.All-buttons button:hover {
+/* .All-buttons button:hover {
   transform: scale(1.1);
   background-color: #c4e6df;
 }
@@ -105,11 +105,11 @@ body {
 
 h1 {
   cursor: default;
-  position: absolute;
-  /* top: 40px; */
-  display: block;
-  /* right: 47px; */
-  text-align: center;
+  position: absolute; */
+/* top: 40px; */
+/* display: block; */
+/* right: 47px; */
+/* text-align: center;
 }
 
 .E {
@@ -179,13 +179,13 @@ h1 span:nth-child(13) {
 h1 span:nth-child(14) {
   animation-delay: 0.8s;
 }
-
+ */
 /* ANIMATION */
-@keyframes bounce {
+/* @keyframes bounce {
   100% {
     top: -20px;
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
       0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
       0 50px 25px rgba(0, 0, 0, 0.2);
   }
-}
+} */

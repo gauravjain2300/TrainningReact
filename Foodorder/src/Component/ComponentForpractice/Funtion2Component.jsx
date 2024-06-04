@@ -211,7 +211,7 @@ export default function Funtion2Component(props) {
                           </p>
                         </td>
                         <td className="tableitem">
-                          <p className="itemtext">{e.pastaQty}</p>
+                          <p className="itemtext">1</p>
                         </td>
                         <td className="tableitem">
                           <p className="itemtext">

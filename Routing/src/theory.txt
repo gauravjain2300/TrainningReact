@@ -1,0 +1,24 @@
+
+Routing
+Routing: in simple language we can say navigation between one component another 
+component
+but as we know that react js is for SPA
+
+it just replace component instead of navigate
+ to manage routing in react js there is one library its called React-Router-Dom
+before use routing we have to add this dependency in project.
+#npm i react-router-dom
+
+
+
+useNavigate(): useNavigate() is one of the most 
+                popular hook which is used to create dynamic navigation in single page application
+
+                Which is provide by react-router-dom.
+
+                in simple programatically we can control navigation between components..
+
+
+navigate(-1): Backward one step Back
+navigate(1): Forward one step next
+
