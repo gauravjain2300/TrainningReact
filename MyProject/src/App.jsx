@@ -62,7 +62,7 @@ export default function App() {
       {/* <AllFunctionComponents /> */}
       {/* Style All Components */}
       {/* All style components  */}
-      {/* <AllStyleComponents /> */}
+      <AllStyleComponents />
       {/* All task examples */}
       {/* <Alltask /> */}
       {/* All state examples */}
@@ -75,7 +75,7 @@ export default function App() {
       {/* <SecondCrudPractice /> */}
       {/* <AllProject /> */}
       {/* <AllhookExample /> */}
-      <Project01 />
+      {/* <Project01 /> */}
       {/* <AllForewardRefExamples /> */}
     </div>
   );

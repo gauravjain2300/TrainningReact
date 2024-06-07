@@ -12,6 +12,8 @@ div {
     rgba(13, 13, 13, 1) 95%
   );
   height: 100vh;
+  color: white;
+  /* text-align: center; */
 }
 
 h1 {
