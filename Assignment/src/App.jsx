@@ -5,6 +5,9 @@ import "./App.css";
 import IncrementDecrement from "./IncrementDecrement/IncrementDecrement";
 import QuestionAndAnwer from "./QuestionAndAnswer/QuestionAndAnwer";
 
+import StyleComponent from "./StyleComponent/StyleComponent";
+import ApiFetch from "./ApiFetch/ApiFetch";
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -30,8 +33,12 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
-      <IncrementDecrement />
-      <QuestionAndAnwer />
+      {/* <IncrementDecrement /> */}
+      {/* <QuestionAndAnwer /> */}
+      {/* <FirstComponent /> */}
+      {/* <FirstComponent /> */}
+      {/* <StyleComponent /> */}
+      <ApiFetch />
     </>
   );
 }

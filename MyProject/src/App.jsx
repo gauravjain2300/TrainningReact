@@ -62,9 +62,9 @@ export default function App() {
       {/* <AllFunctionComponents /> */}
       {/* Style All Components */}
       {/* All style components  */}
-      <AllStyleComponents />
+      {/* <AllStyleComponents /> */}
       {/* All task examples */}
-      {/* <Alltask /> */}
+      <Alltask />
       {/* All state examples */}
       {/* <AllStateExample /> */}
       {/* <AllClassComponent /> */}/{/* <AllProps /> */}

@@ -34,10 +34,10 @@ export default function Alltask() {
       {/* <Eleventh /> */}
       {/* <TwelthTask /> */}
       {/* <Imageadd1 /> */}
-      <ParentTask01 />
+      {/* <ParentTask01 /> */}
       {/* <UservalueArrayTask /> */}
       {/* <TextConverter /> */}
-      {/* <HookTask01 /> */}
+      <HookTask01 />
     </div>
   );
 }
