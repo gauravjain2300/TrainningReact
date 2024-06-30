@@ -7,6 +7,7 @@ import QuestionAndAnwer from "./QuestionAndAnswer/QuestionAndAnwer";
 
 import StyleComponent from "./StyleComponent/StyleComponent";
 import ApiFetch from "./ApiFetch/ApiFetch";
+import AllComponents from "./StyleRouting/AllComponents";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -38,7 +39,8 @@ function App() {
       {/* <FirstComponent /> */}
       {/* <FirstComponent /> */}
       {/* <StyleComponent /> */}
-      <ApiFetch />
+      {/* <ApiFetch /> */}
+      <AllComponents />
     </>
   );
 }
