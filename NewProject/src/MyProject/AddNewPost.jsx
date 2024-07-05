@@ -70,8 +70,11 @@ export default function AddNewPost() {
             height: "500px",
             borderRadius: "15px",
             width: "50%",
+            padding: "100px",
             margin: "0 auto",
             marginTop: "50px",
+            // backgroundColor: "",
+            backgroundColor: "#00000",
           }}
         >
           <TextField
@@ -80,7 +83,7 @@ export default function AddNewPost() {
             variant="standard"
             onChange={(e) => setTitle(e.target.value)}
             sx={{
-              input: { color: "black" },
+              input: { color: "White" },
               label: { color: "#a9a9a9" },
               borderBottom: " 1px solid #ffbd39",
               color: "white",
@@ -95,11 +98,12 @@ export default function AddNewPost() {
             variant="standard"
             onChange={(e) => setDescription(e.target.value)}
             sx={{
-              input: { color: "black" },
+              input: { color: "White" },
               label: { color: "#a9a9a9" },
               borderBottom: " 1px solid #ffbd39",
+
               color: "white",
-              //   Width: "80%",
+
               width: "90%",
             }}
           />
@@ -116,11 +120,29 @@ export default function AddNewPost() {
                 width: "90%",
               }}
             /> */}
+          <br />
+          <br />
           <input
+            // style={}
             type="file"
             onChange={(e) => setImageLink(e.target.files[0])}
           />
-          <button onClick={handleSubmit}>Add Post</button>
+          <br />
+          <br />
+          <button
+            onClick={handleSubmit}
+            style={{
+              width: "30%",
+              height: "50px",
+              borderRadius: "20px",
+              backgroundColor: "#ffbd39",
+              color: "white",
+              fontWeight: "900",
+              marginLeft: "100px",
+            }}
+          >
+            Add Post
+          </button>
         </Box>
       </div>
     </div>

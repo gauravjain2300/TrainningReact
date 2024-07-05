@@ -26,6 +26,7 @@ import { getDownloadURL, uploadBytes, ref } from "firebase/storage";
 
 import ViewAllPost from "./ViewAllPost";
 import AddNewPost from "./AddNewPost";
+import ChatScreen from "./ChatScreen";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -45,10 +46,15 @@ export default function Appbar() {
   const [imageLink, setImageLink] = React.useState();
   const [post, setPost] = React.useState([]);
   const [postUsers, setPostUsers] = React.useState(null);
-
+  const [Messeage, setMessage] = React.useState();
   ////From here starts All Post Data
 
   // -------------------------------------------------------------------------------------------------------------------------
+
+  const handlemesseage = () => {
+    setMessage(!Messeage);
+  };
+
   useEffect(() => {
     fetchUsers();
     fetchPostFun();
@@ -395,6 +401,15 @@ export default function Appbar() {
                   Logout
                 </Typography>
               </MenuItem>
+              <MenuItem>
+                <Typography
+                  textAlign="center"
+                  sx={{ color: "white" }}
+                  onClick={handlemesseage}
+                >
+                  Message
+                </Typography>
+              </MenuItem>
             </Box>
             <Box>
               {" "}
@@ -526,15 +541,14 @@ export default function Appbar() {
           <Box
             className="scroll"
             sx={{
-              // border: "1px solid crimson",
               height: "500px",
               position: "static",
-              // backgroundColor: "#bec0c4",
+
               width: "70%",
               margin: "0 auto",
-              // position: "absolute",
+
               overflow: "scroll",
-              // overflowX: "hidden",
+
               padding: "10px",
 
               borderRadius: "20px",
@@ -691,18 +705,7 @@ export default function Appbar() {
           </Box>
         </Container>
       )}
-
-      {/* <Box class="Main-container" key={index}>
-        <Box class="wrapper">
-          <Box class="banner-image"> </Box>
-          <h1 className="Title"> {singlePost.title}</h1>
-          <p className="description">{singlePost.description}</p>
-        </Box>
-        <Box class="button-wrapper">
-          <button class="btn outline">DETAILS</button>
-          <button class="btn fill">BUY NOW</button>
-        </Box>
-      </Box> */}
+      {Messeage && <ChatScreen />}
     </div>
   );
 }

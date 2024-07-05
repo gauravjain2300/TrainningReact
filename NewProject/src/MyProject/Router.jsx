@@ -24,7 +24,7 @@ export default function Router() {
 
           <Route path="/Admin" element={<AdminDashboard />}></Route>
 
-          <Route path="/table" element={<Table />}></Route>
+          {/* <Route path="/table" element={<Table />}></Route> */}
           <Route path="/Mui" element={<Mui />}></Route>
         </Routes>
       </BrowserRouter>

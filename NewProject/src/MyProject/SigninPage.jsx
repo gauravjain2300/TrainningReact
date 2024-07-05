@@ -111,7 +111,7 @@ export default function SigninPage() {
                   alt=""
                   style={{
                     position: "absolute",
-                    right: "520px",
+                    right: "610px",
                     height: "550px",
                   }}
                 />
