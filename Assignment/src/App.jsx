@@ -8,6 +8,7 @@ import QuestionAndAnwer from "./QuestionAndAnswer/QuestionAndAnwer";
 import StyleComponent from "./StyleComponent/StyleComponent";
 import ApiFetch from "./ApiFetch/ApiFetch";
 import AllComponents from "./StyleRouting/AllComponents";
+import LocalStorage from "./LocalStroage,Api-Assignment/LocalStorage";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -40,7 +41,8 @@ function App() {
       {/* <FirstComponent /> */}
       {/* <StyleComponent /> */}
       {/* <ApiFetch /> */}
-      <AllComponents />
+      {/* <AllComponents /> */}
+      <LocalStorage />
     </>
   );
 }

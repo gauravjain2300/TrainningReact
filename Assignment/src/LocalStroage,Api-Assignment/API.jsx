@@ -1,8 +1,7 @@
-// import React from "react";
 import React, { useEffect, useState } from "react";
 import "../ApiFetch/ApiFetch.css";
 
-export default function ApiFetch() {
+export default function API() {
   {
     const [data, setData] = useState();
     const ImageArray = [
@@ -11,10 +10,10 @@ export default function ApiFetch() {
       "birthday.jpg",
       "ice.jpg",
       "backpack.jpg",
-      // "girl-mascot1.jpg",
+
       "smiling.jpg",
       "Woman.jpg",
-      // "Garden 2.jpg",
+
       "orangeboy.jpg",
       "purple.jpg",
       "Glasses.jpg",
