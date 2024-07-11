@@ -385,7 +385,7 @@ export default function AdminDashboard() {
                             src={user.profilepic}
                             style={{
                               width: "100%",
-                              height: "200px",
+                              height: "300px",
                               borderRadius: "10px",
                             }}
                           />

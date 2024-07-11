@@ -142,8 +142,196 @@ export default function ViewAllPost() {
     console.log("---->>> NEWPOST : ", post);
   };
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       {post.map((singlePost, index) => {
+        return (
+          <div class="post-area" key={index}>
+            <div class="post-main">
+              <div class="post-header">
+                <div class="post-left-header">
+                  <div class="post-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1461800919507-79b16743b257?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1lbnMlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+                      alt=""
+                    />
+                  </div>
+                  <p class="post-username">{postUsers[singlePost.userid]}</p>
+                  <i class="fa-solid fa-certificate"></i>
+                  <span class="one-day"> . 1h </span>
+                </div>
+                <i class="fa-solid fa-grip-lines"></i>
+              </div>
+              <div class="post-main-image">
+                <img
+                  src={singlePost.image}
+                  alt=""
+                  // style={{  }}
+                />
+              </div>
+              <div class="post-fotter">
+                <div class="post-fotter-left">
+                  <i
+                    class="fa-regular fa-heart"
+                    onClick={() => handleLike(singlePost.id)}
+                  ></i>
+
+                  <button
+                    type="button"
+                    style={{
+                      backgroundColor: "transparent",
+                      color: "white",
+                      border: "none",
+                    }}
+                    // class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                  >
+                    <i class="fa-regular fa-message"></i>
+                  </button>
+
+                  <div
+                    class="modal fade"
+                    id="staticBackdrop"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="staticBackdropLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5
+                            class="modal-title"
+                            id="staticBackdropLabel"
+                            style={{ color: "black" }}
+                          >
+                            Comments
+                          </h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <input
+                            type="text"
+                            placeholder="Enter Comment"
+                            style={{ width: "100%" }}
+                            value={newComment}
+                            onChange={(e) => setNewComment(e.target.value)}
+                          />
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            onClick={() => handleComment(singlePost.id)}
+                          >
+                            send
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <i class="fa-regular fa-paper-plane"></i>
+                </div>
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+              <div class="post-description">
+                <p class="post-title">Likes {singlePost.likes?.length || 0}</p>
+                <p class="post-title">
+                  <span>{singlePost.title} </span>
+                  <br />
+                  {singlePost.description}
+                  {/* <br /> more */}
+                </p>
+                {/* <p class="comments"> view all comments</p> */}
+                {singlePost.comments?.length > 0 ? (
+                  singlePost.comments.map((comment, index) => {
+                    return (
+                      <div key={index}>
+                        <p class="post-title">
+                          {postUsers[comment.userid]} :- {comment.text} AT :{" "}
+                          {timeAgo(comment.timestamp)}
+                        </p>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <p className="post-title">No Comments Found</p>
+                )}
+              </div>
+            </div>
+            <hr />
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+//   <div style={{ color: "white" }} key={index}>
+//     <h4 style={{ color: "white" }}>
+//       {/* {singlePost.title} {singlePost.createdAt} */}
+//     </h4>
+//     {/* <h3>{singlePost.userid}</h3> */}
+//     {/* <h4>posted by : {postUsers[singlePost.userid]}</h4> */}
+//     {/* <p>{singlePost.description}</p> */}
+//     <img src={singlePost.image} height={50} width={50} />
+//     {/* <button onClick={() => handleDelete(singlePost.id)}>Delete</button> */}
+//     <br></br>
+//     <h3>Likes : {singlePost.likes?.length || 0}</h3>
+//     <button onClick={() => handleLike(singlePost.id)}>Like</button>
+
+//     <br></br>
+//     <br></br>
+
+//     <h3>Comment Sections : </h3>
+
+//     {singlePost.comments?.length > 0 ? (
+//       singlePost.comments.map((comment, index) => {
+//         return (
+//           <div key={index}>
+//             <p>
+//               Posted by : {postUsers[comment.userid]} :- {comment.text}{" "}
+//               AT : {timeAgo(comment.timestamp)}
+//             </p>
+//           </div>
+//         );
+//       })
+//     ) : (
+//       <p>No Comments Found</p>
+//     )}
+
+//     <input
+//       type="text"
+//       value={newComment}
+//       onChange={(e) => setNewComment(e.target.value)}
+//       placeholder="Type your comments"
+//     />
+//     <button onClick={() => handleComment(singlePost.id)}>
+//       Add Comment
+//     </button>
+//     <hr></hr>
+//     <hr></hr>
+//   </div>
+
+{
+  /* <div> */
+}
+{
+  /* {post.map((singlePost, index) => {
         return (
           <div key={index}>
             <Box class="Main-container" sx={{ color: "white" }}>
@@ -219,56 +407,12 @@ export default function ViewAllPost() {
                 </button>
               </Box>
             </Box>
-            {/* <hr /> */}
-          </div>
-        );
-      })}
-    </div>
-  );
+            {/* <hr /> */
 }
-
-//   <div style={{ color: "white" }} key={index}>
-//     <h4 style={{ color: "white" }}>
-//       {/* {singlePost.title} {singlePost.createdAt} */}
-//     </h4>
-//     {/* <h3>{singlePost.userid}</h3> */}
-//     {/* <h4>posted by : {postUsers[singlePost.userid]}</h4> */}
-//     {/* <p>{singlePost.description}</p> */}
-//     <img src={singlePost.image} height={50} width={50} />
-//     {/* <button onClick={() => handleDelete(singlePost.id)}>Delete</button> */}
-//     <br></br>
-//     <h3>Likes : {singlePost.likes?.length || 0}</h3>
-//     <button onClick={() => handleLike(singlePost.id)}>Like</button>
-
-//     <br></br>
-//     <br></br>
-
-//     <h3>Comment Sections : </h3>
-
-//     {singlePost.comments?.length > 0 ? (
-//       singlePost.comments.map((comment, index) => {
-//         return (
-//           <div key={index}>
-//             <p>
-//               Posted by : {postUsers[comment.userid]} :- {comment.text}{" "}
-//               AT : {timeAgo(comment.timestamp)}
-//             </p>
-//           </div>
-//         );
-//       })
-//     ) : (
-//       <p>No Comments Found</p>
-//     )}
-
-//     <input
-//       type="text"
-//       value={newComment}
-//       onChange={(e) => setNewComment(e.target.value)}
-//       placeholder="Type your comments"
-//     />
-//     <button onClick={() => handleComment(singlePost.id)}>
-//       Add Comment
-//     </button>
-//     <hr></hr>
-//     <hr></hr>
-//   </div>
+{
+  /* </div>
+        // );
+      // })} */
+}
+// </div>
+//); */}

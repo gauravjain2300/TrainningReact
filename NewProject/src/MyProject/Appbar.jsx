@@ -555,6 +555,17 @@ export default function Appbar() {
               marginTop: "10px",
             }}
           >
+            <img
+              src="tourist.png"
+              alt=""
+              style={{
+                position: "absolute",
+                top: "250px",
+                left: "-50px",
+                // zIndex: "1000px",
+              }}
+            />
+
             <ViewAllPost></ViewAllPost>
           </Box>
         </Container>
