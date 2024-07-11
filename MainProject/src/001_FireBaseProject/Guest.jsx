@@ -1,78 +1,71 @@
-import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
-import React, { useEffect, useId, useState } from "react";
-import { db } from "../FirebaseConfig";
-import { useNavigate } from "react-router-dom";
+import { collection, deleteDoc, doc, getDoc, getDocs } from 'firebase/firestore';
+import React, { useEffect, useState } from 'react'
+import { db } from '../../firebaseConfig';
+import { useNavigate } from 'react-router-dom';
 
 export default function Guest() {
-  const [allUser, setAllUsers] = useState([]);
-  const navigate = useNavigate();
+    const [allUsers,setAllUsers] = useState([]);
+    const navigate = useNavigate();
+    useEffect(()=>{
+        fetchAllusers();
+    },[]);
 
-  useEffect(() => {
-    fetchAllUsers();
-  }, []);
+    const fetchAllusers=async()=>{  
+        const querySnapshot = await getDocs(collection(db,"Student"))
+        // console.log("----> QuerySnapshot",querySnapshot);
 
-  const fetchAllUsers = async () => {
-    const querySnapShot = await getDocs(collection(db, "Students"));
-    console.log("----------->Querysnapshot", querySnapShot);
+        const users = [];
+         
+        querySnapshot.forEach((doc)=>{
+            users.push({uid : doc.id,...doc.data()})
+        })
 
-    const users = [];
+        setAllUsers(users);
+        console.log("----> users",users);
+    }
 
-    querySnapShot.forEach((doc) => {
-      users.push({ uid: doc.id, ...doc.data() });
-      setAllUsers(users);
-    });
-  };
+    const deleteUser=async(userid)=>{
+        console.log("--->delete User",userid);
+        const selectedUser = getDoc(doc(db,"Student",userid))
+        await deleteDoc(doc(db,"Student",userid)); // it will remove from firestore 
 
-  const deleteUser = async (userid) => {
-    console.log("-------->deleteUser", userid);
-    await deleteDoc(doc(db, "Students", userid)); // it will remove from firestore
-
-    //remove from array
-    const newArray = allUser.filter((user) => user.uid !== userid);
-
-    setAllUsers(newArray);
-    console.log(newArray);
-  };
-
+        selectedUser.deleteUser;
+        // remove from array 
+        const newArray =allUsers.filter(user => user.uid !== userid)
+        setAllUsers(newArray);
+        console.log(newArray);
+    }
   return (
     <div>
-      <h1>All Users</h1>
+        <h1>ALL USERS</h1>
 
-      <table border={2}>
-        <thead>
-          <tr>
-            <th>Index</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th colSpan={2}>Action</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {allUser ? (
-            allUser.map((user, index) => {
-              return (
-                <tr key={index}>
-                  <td>{index + 1}</td>
-                  {/* <td>img</td> */}
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>
-                    <button onClick={() => navigate(`/edit/${user.uid}`)}>
-                      Edit
-                    </button>
-                  </td>
-                  <td>
-                    <button onClick={() => deleteUser(user.uid)}>Delete</button>
-                  </td>
-                </tr>
-              );
-            })
-          ) : (
-            <h1>No users Found</h1>
-          )}
-        </tbody>
-      </table>
+        <table border={2}>
+            <thead>
+               <tr>
+                    <th>SR. NO</th>
+                    <th>IMAGE</th>
+                    <th>Name</th>
+                    <th>EMAIL</th>
+                    <th colSpan={2}>Action</th>
+               </tr> 
+            </thead>
+            <tbody>
+                {allUsers 
+                    ? 
+                    allUsers.map((user,index)=>{
+                        return <tr key={index}>
+                                <td>{index+1}</td>
+                                <td>{user.profilepic? <img src={user.profilepic} height={50} width={50}/> : <img src="https://img.freepik.com/premium-photo/3d-icon-cartoon-person-profile-avatar-user-profile-3d-render-illustration_276199-401.jpg" height={50} width={50}/>}</td>
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+                                <td><button onClick={()=>navigate(`/edit/${user.uid}`)}>EDIT</button></td>
+                                <td><button onClick={()=>deleteUser(user.uid)}>DELETE</button></td>
+                        </tr> 
+                    })
+                     : <h1>No Users Found</h1>
+                }
+            </tbody>
+        </table>
     </div>
-  );
+  )
 }
