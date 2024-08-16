@@ -57,7 +57,7 @@ export default function ChatScreen() {
         <div>
           <h1>Inbox</h1>
           <h2>welcome {currentUser}</h2>
-          <h2>start chatting with {chatUser}</h2>
+          <h2 style={{ color: "white" }}>start chatting with {chatUser}</h2>
           <input
             type="text"
             placeholder="Type Here"
